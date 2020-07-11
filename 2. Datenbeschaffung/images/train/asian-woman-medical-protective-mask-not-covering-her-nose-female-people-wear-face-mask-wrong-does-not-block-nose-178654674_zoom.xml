@@ -1,0 +1,26 @@
+<annotation>
+    <folder>rot_img</folder>
+    <filename>asian-woman-medical-protective-mask-not-covering-her-nose-female-people-wear-face-mask-wrong-does-not-block-nose-178654674_zoom.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Trashbin/rot_img/asian-woman-medical-protective-mask-not-covering-her-nose-female-people-wear-face-mask-wrong-does-not-block-nose-178654674_zoom.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>800</width>
+        <height>533</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>412</xmin>
+            <ymin>116</ymin>
+            <xmax>506</xmax>
+            <ymax>313</ymax>
+        </bndbox>
+    </object>
+</annotation>

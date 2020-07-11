@@ -1,0 +1,26 @@
+<annotation>
+	<folder>img</folder>
+	<filename>Bildschirmfoto 2020-06-24 um 01.00.49.jpg</filename>
+	<path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img/Bildschirmfoto 2020-06-24 um 01.00.49.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>559</width>
+		<height>581</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>mask_weared_incorrect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>181</xmin>
+			<ymin>229</ymin>
+			<xmax>505</xmax>
+			<ymax>554</ymax>
+		</bndbox>
+	</object>
+</annotation>

@@ -1,0 +1,26 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>caucasian-young-woman-covering-her-260nw-1692711202_flip.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/caucasian-young-woman-covering-her-260nw-1692711202_flip.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>390</width>
+        <height>280</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>167</xmin>
+            <ymin>42</ymin>
+            <xmax>221</xmax>
+            <ymax>106</ymax>
+        </bndbox>
+    </object>
+</annotation>

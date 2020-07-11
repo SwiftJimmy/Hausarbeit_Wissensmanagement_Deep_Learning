@@ -1,0 +1,48 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>maksssksksss45_rotated_-20_to_-7.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/maksssksksss45_rotated_-20_to_-7.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>400</width>
+        <height>226</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>51</xmin>
+            <ymin>54</ymin>
+            <xmax>88</xmax>
+            <ymax>88</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>209</xmin>
+            <ymin>28</ymin>
+            <xmax>266</xmax>
+            <ymax>81</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>257</xmin>
+            <ymin>144</ymin>
+            <xmax>294</xmax>
+            <ymax>193</ymax>
+        </bndbox>
+    </object>
+</annotation>

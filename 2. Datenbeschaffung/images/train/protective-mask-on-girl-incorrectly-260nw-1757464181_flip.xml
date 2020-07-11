@@ -1,0 +1,26 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>protective-mask-on-girl-incorrectly-260nw-1757464181_flip.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/protective-mask-on-girl-incorrectly-260nw-1757464181_flip.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>389</width>
+        <height>280</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>156</xmin>
+            <ymin>65</ymin>
+            <xmax>233</xmax>
+            <ymax>152</ymax>
+        </bndbox>
+    </object>
+</annotation>

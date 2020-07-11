@@ -1,0 +1,26 @@
+<annotation>
+	<folder>img</folder>
+	<filename>bild 83.jpg</filename>
+	<path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img/bild 83.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>301</width>
+		<height>167</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>mask_weared_incorrect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>137</xmin>
+			<ymin>25</ymin>
+			<xmax>169</xmax>
+			<ymax>63</ymax>
+		</bndbox>
+	</object>
+</annotation>

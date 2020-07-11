@@ -1,0 +1,37 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>maksssksksss182_flip.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/maksssksksss182_flip.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>400</width>
+        <height>267</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>233</xmin>
+            <ymin>48</ymin>
+            <xmax>283</xmax>
+            <ymax>98</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>129</xmin>
+            <ymin>49</ymin>
+            <xmax>194</xmax>
+            <ymax>109</ymax>
+        </bndbox>
+    </object>
+</annotation>

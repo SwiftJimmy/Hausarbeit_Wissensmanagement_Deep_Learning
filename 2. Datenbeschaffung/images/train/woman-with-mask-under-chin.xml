@@ -1,0 +1,26 @@
+<annotation>
+	<folder>img</folder>
+	<filename>woman-with-mask-under-chin.jpg</filename>
+	<path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img/woman-with-mask-under-chin.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>360</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>mask_weared_incorrect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>181</xmin>
+			<ymin>82</ymin>
+			<xmax>338</xmax>
+			<ymax>248</ymax>
+		</bndbox>
+	</object>
+</annotation>

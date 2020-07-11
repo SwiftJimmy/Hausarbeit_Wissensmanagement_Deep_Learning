@@ -1,0 +1,26 @@
+<annotation>
+	<folder>img</folder>
+	<filename>young-beautiful-woman-dressed-doctors-coat-red-necklace-facial-mask-pulled-down-to-chin-holding-up-blue-laboratory-77513002.jpg</filename>
+	<path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img/young-beautiful-woman-dressed-doctors-coat-red-necklace-facial-mask-pulled-down-to-chin-holding-up-blue-laboratory-77513002.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>1300</width>
+		<height>951</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>mask_weared_incorrect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>349</xmin>
+			<ymin>250</ymin>
+			<xmax>576</xmax>
+			<ymax>578</ymax>
+		</bndbox>
+	</object>
+</annotation>

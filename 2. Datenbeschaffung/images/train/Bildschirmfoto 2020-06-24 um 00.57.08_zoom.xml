@@ -1,0 +1,59 @@
+<annotation>
+    <folder>rot_img</folder>
+    <filename>Bildschirmfoto 2020-06-24 um 00.57.08_zoom.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Trashbin/rot_img/Bildschirmfoto 2020-06-24 um 00.57.08_zoom.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>579</width>
+        <height>564</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>298</xmin>
+            <ymin>101</ymin>
+            <xmax>325</xmax>
+            <ymax>147</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>265</xmin>
+            <ymin>128</ymin>
+            <xmax>287</xmax>
+            <ymax>175</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>398</xmin>
+            <ymin>106</ymin>
+            <xmax>414</xmax>
+            <ymax>139</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>421</xmin>
+            <ymin>107</ymin>
+            <xmax>436</xmax>
+            <ymax>149</ymax>
+        </bndbox>
+    </object>
+</annotation>

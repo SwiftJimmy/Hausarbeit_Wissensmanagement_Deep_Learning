@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>cop.jpg</filename>
+	<path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/models/research/object_detection/images/train/cop.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>2000</width>
+		<height>1389</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>mask_weared_incorrect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>747</xmin>
+			<ymin>308</ymin>
+			<xmax>1329</xmax>
+			<ymax>1036</ymax>
+		</bndbox>
+	</object>
+</annotation>
