@@ -1,10 +1,6 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Jun 21 14:47:58 2020
 
-@author: swift
-"""
 
 from __future__ import division
 from __future__ import print_function
@@ -26,7 +22,7 @@ flags.DEFINE_string('image_dir', '', 'Path to images')
 FLAGS = flags.FLAGS
 
 
-# TO-DO replace this with label map
+# Eingaben der Kategorien
 def class_text_to_int(row_label):
     if row_label == 'with_mask':
         return 1
@@ -37,7 +33,6 @@ def class_text_to_int(row_label):
     else:
         None
  		
-
 
 def split(df, group):
     data = namedtuple('data', ['filename', 'object'])
