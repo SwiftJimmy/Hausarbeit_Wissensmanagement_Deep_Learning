@@ -1,22 +1,21 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""
-Created on Sun Jun 21 14:31:42 2020
-
-@author: swift
-"""
 
 import os
 import glob
 import pandas as pd
 import xml.etree.ElementTree as ET
 
-path = "/Users/swift/Google Drive/models/research/object_detection/images/"
+path = "path/to/images"
+
+# Funktion zum Speicherung der Annotationen
 def xml_to_csv(path):
     xml_list = []
+    # für jede XML Datei 
     for xml_file in glob.glob(path + '/*.xml'):
         tree = ET.parse(xml_file)
         root = tree.getroot()
+        # für jedes Objekt in der XML Datei
         for member in root.findall('object'):
             value = (root.find('filename').text.replace("png","jpg"),
                      int(root.find('size')[0].text),
@@ -32,13 +31,14 @@ def xml_to_csv(path):
     xml_df = pd.DataFrame(xml_list, columns=column_name)
     return xml_df
 
+# Hauptfunktion für die CSV Generierung
 def main():
+	# erstellt eine CSV Datei jeweils für die Trainings- und Testdaten 
     for folder in ['train','test']:
         image_path = path  + folder
         xml_df = xml_to_csv(image_path)
         xml_df.to_csv((path + folder + '_labels.csv'), index=None)
-        print('Successfully converted xml to csv.')
 
 
-
+# Funktion wird ausgeführt
 main()
