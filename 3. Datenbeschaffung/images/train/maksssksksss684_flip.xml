@@ -1,0 +1,70 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>maksssksksss684_flip.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/maksssksksss684_flip.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>400</width>
+        <height>269</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>298</xmin>
+            <ymin>55</ymin>
+            <xmax>320</xmax>
+            <ymax>80</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>208</xmin>
+            <ymin>71</ymin>
+            <xmax>226</xmax>
+            <ymax>90</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>157</xmin>
+            <ymin>79</ymin>
+            <xmax>172</xmax>
+            <ymax>98</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>104</xmin>
+            <ymin>75</ymin>
+            <xmax>118</xmax>
+            <ymax>90</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>26</xmin>
+            <ymin>61</ymin>
+            <xmax>35</xmax>
+            <ymax>70</ymax>
+        </bndbox>
+    </object>
+</annotation>

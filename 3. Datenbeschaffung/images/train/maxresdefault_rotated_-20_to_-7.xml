@@ -1,0 +1,26 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>maxresdefault_rotated_-20_to_-7.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/maxresdefault_rotated_-20_to_-7.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>1280</width>
+        <height>720</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>379</xmin>
+            <ymin>1</ymin>
+            <xmax>838</xmax>
+            <ymax>577</ymax>
+        </bndbox>
+    </object>
+</annotation>

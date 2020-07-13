@@ -1,0 +1,26 @@
+<annotation>
+	<folder>train</folder>
+	<filename>Bild 40_rotated_-20_to_-7.jpg</filename>
+	<path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/models/research/object_detection/images/train/Bild 40_rotated_-20_to_-7.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>225</width>
+		<height>225</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>mask_weared_incorrect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>91</xmin>
+			<ymin>63</ymin>
+			<xmax>169</xmax>
+			<ymax>173</ymax>
+		</bndbox>
+	</object>
+</annotation>

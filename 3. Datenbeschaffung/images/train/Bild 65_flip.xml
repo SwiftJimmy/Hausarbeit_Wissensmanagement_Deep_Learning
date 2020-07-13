@@ -1,0 +1,48 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>Bild 65_flip.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/Bild 65_flip.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>535</width>
+        <height>749</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>224</xmin>
+            <ymin>102</ymin>
+            <xmax>292</xmax>
+            <ymax>168</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>485</xmin>
+            <ymin>111</ymin>
+            <xmax>525</xmax>
+            <ymax>163</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>375</xmin>
+            <ymin>170</ymin>
+            <xmax>399</xmax>
+            <ymax>200</ymax>
+        </bndbox>
+    </object>
+</annotation>

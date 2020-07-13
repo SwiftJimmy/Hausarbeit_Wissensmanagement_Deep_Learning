@@ -1,0 +1,70 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>maksssksksss471_flip.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/maksssksksss471_flip.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>400</width>
+        <height>300</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>300</xmin>
+            <ymin>71</ymin>
+            <xmax>335</xmax>
+            <ymax>113</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>247</xmin>
+            <ymin>61</ymin>
+            <xmax>266</xmax>
+            <ymax>88</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>206</xmin>
+            <ymin>35</ymin>
+            <xmax>232</xmax>
+            <ymax>68</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>14</xmin>
+            <ymin>52</ymin>
+            <xmax>37</xmax>
+            <ymax>75</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>43</xmin>
+            <ymin>78</ymin>
+            <xmax>64</xmax>
+            <ymax>95</ymax>
+        </bndbox>
+    </object>
+</annotation>

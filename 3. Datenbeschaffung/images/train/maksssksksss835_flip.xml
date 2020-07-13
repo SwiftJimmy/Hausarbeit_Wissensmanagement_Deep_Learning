@@ -1,0 +1,26 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>maksssksksss835_flip.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/maksssksksss835_flip.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>267</width>
+        <height>400</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>105</xmin>
+            <ymin>86</ymin>
+            <xmax>210</xmax>
+            <ymax>184</ymax>
+        </bndbox>
+    </object>
+</annotation>

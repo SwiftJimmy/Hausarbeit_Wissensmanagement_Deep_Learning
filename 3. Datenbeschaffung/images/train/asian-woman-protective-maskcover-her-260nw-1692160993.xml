@@ -1,0 +1,26 @@
+<annotation>
+	<folder>img</folder>
+	<filename>asian-woman-protective-maskcover-her-260nw-1692160993.jpg</filename>
+	<path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img/asian-woman-protective-maskcover-her-260nw-1692160993.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>390</width>
+		<height>280</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>mask_weared_incorrect</name>
+		<pose>Unspecified</pose>
+		<truncated>1</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>243</xmin>
+			<ymin>1</ymin>
+			<xmax>390</xmax>
+			<ymax>219</ymax>
+		</bndbox>
+	</object>
+</annotation>

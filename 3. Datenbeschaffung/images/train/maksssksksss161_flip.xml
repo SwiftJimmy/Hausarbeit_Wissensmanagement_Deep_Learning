@@ -1,0 +1,26 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>maksssksksss161_flip.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/maksssksksss161_flip.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>301</width>
+        <height>400</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>111</xmin>
+            <ymin>227</ymin>
+            <xmax>178</xmax>
+            <ymax>328</ymax>
+        </bndbox>
+    </object>
+</annotation>

@@ -1,0 +1,59 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>Bildschirmfoto 2020-06-24 um 00.57.13_flip.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/Bildschirmfoto 2020-06-24 um 00.57.13_flip.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>575</width>
+        <height>533</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>294</xmin>
+            <ymin>96</ymin>
+            <xmax>341</xmax>
+            <ymax>161</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>221</xmin>
+            <ymin>61</ymin>
+            <xmax>283</xmax>
+            <ymax>122</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>44</xmin>
+            <ymin>70</ymin>
+            <xmax>80</xmax>
+            <ymax>114</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>10</xmin>
+            <ymin>75</ymin>
+            <xmax>41</xmax>
+            <ymax>128</ymax>
+        </bndbox>
+    </object>
+</annotation>

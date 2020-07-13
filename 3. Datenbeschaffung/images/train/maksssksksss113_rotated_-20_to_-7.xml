@@ -1,0 +1,59 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>maksssksksss113_rotated_-20_to_-7.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/maksssksksss113_rotated_-20_to_-7.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>400</width>
+        <height>267</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>130</xmin>
+            <ymin>116</ymin>
+            <xmax>147</xmax>
+            <ymax>134</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>201</xmin>
+            <ymin>115</ymin>
+            <xmax>213</xmax>
+            <ymax>131</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>290</xmin>
+            <ymin>99</ymin>
+            <xmax>306</xmax>
+            <ymax>116</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>226</xmin>
+            <ymin>113</ymin>
+            <xmax>241</xmax>
+            <ymax>130</ymax>
+        </bndbox>
+    </object>
+</annotation>

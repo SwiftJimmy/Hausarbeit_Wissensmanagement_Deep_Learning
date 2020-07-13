@@ -1,0 +1,26 @@
+<annotation>
+    <folder>rot_img</folder>
+    <filename>Bildschirmfoto 2020-06-24 um 01.00.49_zoom.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Trashbin/rot_img/Bildschirmfoto 2020-06-24 um 01.00.49_zoom.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>559</width>
+        <height>581</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>201</xmin>
+            <ymin>245</ymin>
+            <xmax>458</xmax>
+            <ymax>487</ymax>
+        </bndbox>
+    </object>
+</annotation>

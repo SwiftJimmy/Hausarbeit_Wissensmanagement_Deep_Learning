@@ -1,0 +1,26 @@
+<annotation>
+	<folder>img</folder>
+	<filename>young-darkskinned-girl-wearing-protective-260nw-1749290624.jpg</filename>
+	<path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img/young-darkskinned-girl-wearing-protective-260nw-1749290624.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>390</width>
+		<height>280</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>mask_weared_incorrect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>185</xmin>
+			<ymin>77</ymin>
+			<xmax>283</xmax>
+			<ymax>168</ymax>
+		</bndbox>
+	</object>
+</annotation>

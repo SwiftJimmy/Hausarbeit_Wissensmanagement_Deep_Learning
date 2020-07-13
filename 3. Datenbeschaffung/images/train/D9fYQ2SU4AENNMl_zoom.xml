@@ -1,0 +1,26 @@
+<annotation>
+    <folder>rot_img</folder>
+    <filename>D9fYQ2SU4AENNMl_zoom.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Trashbin/rot_img/D9fYQ2SU4AENNMl_zoom.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>900</width>
+        <height>1200</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>196</xmin>
+            <ymin>393</ymin>
+            <xmax>586</xmax>
+            <ymax>678</ymax>
+        </bndbox>
+    </object>
+</annotation>

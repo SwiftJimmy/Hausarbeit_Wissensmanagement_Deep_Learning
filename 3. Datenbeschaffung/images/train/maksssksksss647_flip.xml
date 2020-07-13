@@ -1,0 +1,147 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>maksssksksss647_flip.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/maksssksksss647_flip.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>400</width>
+        <height>265</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>334</xmin>
+            <ymin>40</ymin>
+            <xmax>379</xmax>
+            <ymax>87</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>292</xmin>
+            <ymin>21</ymin>
+            <xmax>318</xmax>
+            <ymax>43</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>248</xmin>
+            <ymin>44</ymin>
+            <xmax>266</xmax>
+            <ymax>67</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>218</xmin>
+            <ymin>75</ymin>
+            <xmax>250</xmax>
+            <ymax>109</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>255</xmin>
+            <ymin>159</ymin>
+            <xmax>338</xmax>
+            <ymax>240</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>136</xmin>
+            <ymin>142</ymin>
+            <xmax>214</xmax>
+            <ymax>223</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>132</xmin>
+            <ymin>85</ymin>
+            <xmax>171</xmax>
+            <ymax>128</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>186</xmin>
+            <ymin>52</ymin>
+            <xmax>214</xmax>
+            <ymax>82</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>50</xmin>
+            <ymin>47</ymin>
+            <xmax>83</xmax>
+            <ymax>81</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>3</xmin>
+            <ymin>23</ymin>
+            <xmax>39</xmax>
+            <ymax>53</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>0</xmin>
+            <ymin>58</ymin>
+            <xmax>32</xmax>
+            <ymax>96</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>61</xmin>
+            <ymin>123</ymin>
+            <xmax>106</xmax>
+            <ymax>172</ymax>
+        </bndbox>
+    </object>
+</annotation>

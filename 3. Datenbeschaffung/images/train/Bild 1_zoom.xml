@@ -1,0 +1,38 @@
+<annotation>
+	<folder>train</folder>
+	<filename>Bild 1_zoom.jpg</filename>
+	<path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/models/research/object_detection/images/train/Bild 1_zoom.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>299</width>
+		<height>168</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>mask_weared_incorrect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>77</xmin>
+			<ymin>61</ymin>
+			<xmax>123</xmax>
+			<ymax>111</ymax>
+		</bndbox>
+	</object>
+	<object>
+		<name>with_mask</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>194</xmin>
+			<ymin>81</ymin>
+			<xmax>224</xmax>
+			<ymax>112</ymax>
+		</bndbox>
+	</object>
+</annotation>

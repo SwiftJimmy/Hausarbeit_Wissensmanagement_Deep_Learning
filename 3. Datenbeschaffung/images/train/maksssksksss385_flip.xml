@@ -1,0 +1,70 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>maksssksksss385_flip.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/maksssksksss385_flip.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>400</width>
+        <height>245</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>243</xmin>
+            <ymin>76</ymin>
+            <xmax>275</xmax>
+            <ymax>113</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>4</xmin>
+            <ymin>25</ymin>
+            <xmax>15</xmax>
+            <ymax>46</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>171</xmin>
+            <ymin>27</ymin>
+            <xmax>183</xmax>
+            <ymax>41</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>339</xmin>
+            <ymin>20</ymin>
+            <xmax>349</xmax>
+            <ymax>31</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>303</xmin>
+            <ymin>15</ymin>
+            <xmax>313</xmax>
+            <ymax>27</ymax>
+        </bndbox>
+    </object>
+</annotation>

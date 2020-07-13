@@ -1,0 +1,37 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>maksssksksss194_rotated_7_to_20.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/maksssksksss194_rotated_7_to_20.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>400</width>
+        <height>267</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>201</xmin>
+            <ymin>67</ymin>
+            <xmax>221</xmax>
+            <ymax>89</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>223</xmin>
+            <ymin>73</ymin>
+            <xmax>237</xmax>
+            <ymax>87</ymax>
+        </bndbox>
+    </object>
+</annotation>

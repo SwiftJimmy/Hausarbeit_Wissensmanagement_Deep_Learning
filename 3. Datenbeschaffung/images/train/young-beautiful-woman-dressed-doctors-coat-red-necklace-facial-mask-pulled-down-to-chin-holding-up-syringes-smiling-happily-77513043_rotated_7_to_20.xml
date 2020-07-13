@@ -1,0 +1,26 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>young-beautiful-woman-dressed-doctors-coat-red-necklace-facial-mask-pulled-down-to-chin-holding-up-syringes-smiling-happily-77513043_rotated_7_to_20.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/young-beautiful-woman-dressed-doctors-coat-red-necklace-facial-mask-pulled-down-to-chin-holding-up-syringes-smiling-happily-77513043_rotated_7_to_20.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>800</width>
+        <height>530</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>230</xmin>
+            <ymin>113</ymin>
+            <xmax>417</xmax>
+            <ymax>347</ymax>
+        </bndbox>
+    </object>
+</annotation>

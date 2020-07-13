@@ -1,0 +1,26 @@
+<annotation>
+	<folder>img</folder>
+	<filename>DFGXUPDUQAAMVhX.jpg</filename>
+	<path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img/DFGXUPDUQAAMVhX.jpg</path>
+	<source>
+		<database>Unknown</database>
+	</source>
+	<size>
+		<width>640</width>
+		<height>617</height>
+		<depth>3</depth>
+	</size>
+	<segmented>0</segmented>
+	<object>
+		<name>mask_weared_incorrect</name>
+		<pose>Unspecified</pose>
+		<truncated>0</truncated>
+		<difficult>0</difficult>
+		<bndbox>
+			<xmin>161</xmin>
+			<ymin>205</ymin>
+			<xmax>513</xmax>
+			<ymax>557</ymax>
+		</bndbox>
+	</object>
+</annotation>

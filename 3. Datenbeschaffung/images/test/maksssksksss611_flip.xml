@@ -1,0 +1,70 @@
+<annotation>
+    <folder>img_rotate</folder>
+    <filename>maksssksksss611_flip.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Mask/img_rotate/maksssksksss611_flip.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>400</width>
+        <height>267</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>348</xmin>
+            <ymin>36</ymin>
+            <xmax>367</xmax>
+            <ymax>63</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>286</xmin>
+            <ymin>63</ymin>
+            <xmax>304</xmax>
+            <ymax>83</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>234</xmin>
+            <ymin>85</ymin>
+            <xmax>244</xmax>
+            <ymax>104</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>142</xmin>
+            <ymin>68</ymin>
+            <xmax>157</xmax>
+            <ymax>87</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>mask_weared_incorrect</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>95</xmin>
+            <ymin>76</ymin>
+            <xmax>108</xmax>
+            <ymax>94</ymax>
+        </bndbox>
+    </object>
+</annotation>

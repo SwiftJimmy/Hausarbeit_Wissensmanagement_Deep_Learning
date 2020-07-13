@@ -1,0 +1,48 @@
+<annotation>
+    <folder>rot_img</folder>
+    <filename>Bild 33_zoom.jpg</filename>
+    <path>/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/MaskDataSet/Mask/Trashbin/rot_img/Bild 33_zoom.jpg</path>
+    <source>
+        <database>Unknown</database>
+    </source>
+    <size>
+        <width>287</width>
+        <height>176</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>47</xmin>
+            <ymin>70</ymin>
+            <xmax>82</xmax>
+            <ymax>95</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>without_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>127</xmin>
+            <ymin>54</ymin>
+            <xmax>156</xmax>
+            <ymax>79</ymax>
+        </bndbox>
+    </object>    <object>
+        <name>with_mask</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>200</xmin>
+            <ymin>68</ymin>
+            <xmax>233</xmax>
+            <ymax>95</ymax>
+        </bndbox>
+    </object>
+</annotation>
