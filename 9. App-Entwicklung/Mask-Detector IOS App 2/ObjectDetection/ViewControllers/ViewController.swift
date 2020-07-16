@@ -179,7 +179,7 @@ extension ViewController: InferenceViewControllerDelegate {
 // MARK: CameraFeedManagerDelegate Methods
 extension ViewController: CameraFeedManagerDelegate {
 
-    
+    //Aufnahme des Photos
     func tookPhoto(from data: Data) {
         
         var maskImageInfoArray = [MaskImage.ImageInfo]()
@@ -196,25 +196,28 @@ extension ViewController: CameraFeedManagerDelegate {
             }
         })
         
-        // - hier wird das Image aus dem Data Object erstellt
+        // Das Image wird aus dem Data Object erstellt
         var image = UIImage(data: data)
         let widthInPixels = image!.size.width * image!.scale
         let heightInPixels = image!.size.height * image!.scale
         
+        // Jede erkannte Kategorie wird in das Image mit Rahmen eingezeichnet
         objectOverlays.forEach { (overlay) in
             let x = overlay.borderRect.minX
             let y = overlay.borderRect.minY
             let width = overlay.borderRect.size.width
             let height = overlay.borderRect.size.height
-
+            // Umskallierung der Rahemn der vorab erkannten Kategorien
             let newx = (x/400)*widthInPixels
             let newy = (y/600)*heightInPixels
             let newwidth = (width/300)*widthInPixels
             let newheight = (height/700)*heightInPixels
-            // - das zu zeichnende Ractangle wird erstellt
+            // Das zu zeichnende Ractangle wird erstellt
             let cgRect = CGRect(x: newx, y: newy, width: newwidth, height: newheight)
             let cgPoint = CGPoint(x: newx, y: newy-60)
+            // Rectangle wird eingezeichnet
             image = drawRectangleOnImage(image: image!, withFrame: cgRect,rectColor: overlay.color)
+            // Rectangles werden mit Kategorienamen versehen
             image = textToImage(drawText:overlay.name, inImage: image!, atPoint: cgPoint, textColor: overlay.color,textFont: overlay.font)
         }
    
@@ -225,7 +228,9 @@ extension ViewController: CameraFeedManagerDelegate {
 
     }
     
-    
+    /**
+     In jedes Bild werden die erkannten Kategorien mit einem Rahmen eingezeichnet und benannt.
+    */
     func drawRectangleOnImage(image: UIImage, withFrame: CGRect,rectColor: UIColor) -> UIImage? {
 
         UIGraphicsBeginImageContextWithOptions( image.size, false, 0)
@@ -241,6 +246,9 @@ extension ViewController: CameraFeedManagerDelegate {
         return newImage
     }
     
+    /**
+     Bennenung der einzelnen Kategorie-Rahmen
+    */
     func textToImage(drawText text: String, inImage image: UIImage, atPoint point: CGPoint,textColor: UIColor, textFont: UIFont ) -> UIImage {
         
         let textFont = UIFont(name: "Helvetica Bold", size:textFont.pointSize * 2)!
@@ -263,6 +271,9 @@ extension ViewController: CameraFeedManagerDelegate {
         return newImage!
     }
     
+    /**
+         Das Image wird als Json Datei gesichert.
+    */
     private func save() {
         
         if let stringDate = self.maskImage?.date?.getTimeAndDateFormatted(dateFormat: "dd.MM.yyyy_HH:mm:ss") {
