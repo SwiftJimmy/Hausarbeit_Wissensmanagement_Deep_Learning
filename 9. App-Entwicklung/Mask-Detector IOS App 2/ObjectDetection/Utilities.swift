@@ -1,7 +1,12 @@
 import Foundation
-
+/**
+ Erweiterung der Date Klasse
+ */
 extension Date {
- 
+    
+    /**
+            Funktion gibt das Datum formatiert zurück
+     */
     func getTimeAndDateFormatted(dateFormat: String) -> String {
         
         let dateFormatter = DateFormatter()
@@ -13,12 +18,13 @@ extension Date {
         
         return dateFormatter.string(from: self)
     }
-
+    
+    /**
+           Funktion gibt den Namen des Wochentag zurück
+    */
     func dayNameOfWeek() -> String {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "EEEE"
         return dateFormatter.string(from: self)
     }
-    
-    
 }

@@ -2,6 +2,9 @@ import UIKit
 import Charts
 import SRCountdownTimer
 
+/**
+   Beinhaltet die Logic der  Report-Ansicht.
+*/
 class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPresentationControllerDelegate {
 
     var maskImages = [Date: [MaskImage]]()
@@ -18,6 +21,7 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
     var confidenceAverageValueOverall = 0.0
     let dateFormat = "dd.MM.yyyy"
     
+    // initialisierung der Label
     private var withMaskLabel: UILabel = {
         let label = UILabel()
         label.text = "100%"
@@ -33,6 +37,9 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
     
    private var overallAverageLabel = UILabel()
     
+    /**
+        Erstellung der einzelnen Circles
+     */
     @IBOutlet weak var withMaskCircle: SRCountdownTimer! {
         didSet {
             withMaskCircle.isLabelHidden = true
@@ -85,6 +92,7 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
     
     var numberOfDataEntries = [PieChartDataEntry]()
     
+    // die Logic des Zurück zum Time-Laps Button
     @IBAction func goBack(segue: UIStoryboardSegue) {
         if let mvcUnwoundFrom = segue.source as? ChooseItemTableViewController {
             if chooseDayTxtField.text != mvcUnwoundFrom.cellText {
@@ -101,6 +109,7 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
         }
     }
     
+    // Auswahl des Datum für den Report
     @IBOutlet weak var chooseDayTxtField: UITextField! {
         didSet {
             chooseDayTxtField.delegate = self
@@ -109,6 +118,9 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
     @IBOutlet weak var pieChartView: PieChartView!
     @IBOutlet weak var recognitionRate: UIView!
     
+    /**
+            Die Funktion lädt die Inhalte nachdem der View erstellt wurde
+     */
     override func viewDidLoad() {
         super.viewDidLoad()
         let latestDate = maskImages.keys.sorted(by: >).first!
@@ -122,6 +134,9 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
         resetTimer()
     }
     
+    /**
+      Die löscht alle bestehden Labels
+    */
     private func removeLabels() {
         withMaskCircle.subviews.forEach({
             $0.removeFromSuperview()
@@ -137,6 +152,9 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
         })
     }
     
+    /**
+      Die Funktion erstellt die Inhalte anhand des ausgewählten Datums
+    */
     func setup(for date: Date) {
         createReports(for: date)
         createRecognitionAverages()
@@ -144,6 +162,9 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
         updateChartData()
     }
     
+    /**
+            Setzt den Startpunkt für die Animation der Kreise
+     */
     private func startTimer() {
         withMaskCircle.start(beginingValue: 100, interval: 0.05)
         withoutMaskCircle.start(beginingValue: 100, interval: 0.05)
@@ -151,6 +172,9 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
         overallAverage.start(beginingValue: 100, interval: 0.05)
     }
     
+    /**
+           Die Kreise werden zurückgesetzt
+    */
     private func resetTimer() {
         withMaskCircle.reset()
         withoutMaskCircle.reset()
@@ -158,6 +182,9 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
         overallAverage.reset()
     }
     
+    /**
+           Die Funktion erstellt den Report anhand des ausgewählten Datums
+    */
     private func createReports(for date: Date) {
         var withMaskCount = 0
         var withoutMaskCount = 0
@@ -207,6 +234,9 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
         
     }
     
+    /**
+           Die Funktion erstellt das Erkennungs-Durhschnitt Barometer
+    */
     private func createRecognitionAverages() {
         
         print(confidenceValueWithMask.reduce(0, +))
@@ -240,6 +270,9 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
        
     }
     
+    /**
+           Die Funktion erstellt das das PieChart
+    */
     private func setupChart() {
         pieChartView.drawHoleEnabled = false
         pieChartView.drawEntryLabelsEnabled = false
@@ -260,6 +293,9 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
         numberOfDataEntries = [dataEntryWithMask, dataEntryWithoutMask, dataEntryWornMaskIncorrectly]
     }
     
+    /**
+           Die Funktion aktuallisiert die PieChart Data
+    */
     private func updateChartData() {
         let chartDataSet = PieChartDataSet(entries: numberOfDataEntries, label: "")
    
@@ -304,6 +340,9 @@ class ReportsViewController: UIViewController, UITextFieldDelegate, UIPopoverPre
        }
 }
 
+/**
+       Die Funktion erstellt den Timer View (die Animierten Circles)
+*/
 extension ReportsViewController: SRCountdownTimerDelegate {
     
     func timerDidUpdateCounterValue(sender: SRCountdownTimer, newValue: Int) {
@@ -371,6 +410,9 @@ extension ReportsViewController: SRCountdownTimerDelegate {
     }
 }
 
+/**
+       Die Funktion erstellt den View
+*/
 extension ReportsViewController {
     func setupLabels() {
        
