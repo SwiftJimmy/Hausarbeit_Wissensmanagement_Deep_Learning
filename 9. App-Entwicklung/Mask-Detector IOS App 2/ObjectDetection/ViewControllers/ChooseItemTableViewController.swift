@@ -1,5 +1,7 @@
 import UIKit
-
+/**
+ View für die Auswahl der Drop-Down elemente
+ */
 class ChooseItemTableViewController: UITableViewController {
     
     var cellText = ""
@@ -17,13 +19,14 @@ class ChooseItemTableViewController: UITableViewController {
 
         return 1
     }
-
+    
+    // Gibt die Anzahl an Auswahlmöglichkeiten zurück
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
      
         return dataSource.count
     }
 
-    
+    // Funktion erstellt die Zelle in der Dropdown-Auswahl
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "chooseItemCell", for: indexPath)
         cell.accessoryType = .none
@@ -49,6 +52,7 @@ class ChooseItemTableViewController: UITableViewController {
         return cell
     }
     
+    // Funktion für die Auwswahl eines Elements aus dem Drow-Down Menue (Highliting während der Finger auf der Zelle liegt)
     override func tableView(_ tableView: UITableView, willSelectRowAt indexPath: IndexPath) -> IndexPath? {
         if let indexPathLastSelectedCell = tableView.indexPath(for: self.lastSelectedCell) {
             let cell = tableView.cellForRow(at: indexPathLastSelectedCell)

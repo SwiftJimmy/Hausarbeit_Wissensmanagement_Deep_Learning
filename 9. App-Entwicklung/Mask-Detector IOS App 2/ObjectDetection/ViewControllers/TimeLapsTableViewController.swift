@@ -1,5 +1,7 @@
 import UIKit
-
+/**
+   Beinhaltet die Logic der Time-Laps-Ansicht.
+*/
 class TimeLapsTableViewController: UITableViewController {
 
     private var loadedMaskImages = [MaskImage]() {

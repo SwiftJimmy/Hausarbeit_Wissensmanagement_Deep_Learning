@@ -1,8 +1,12 @@
 import UIKit
 
+/**
+   Beinhaltet die Logic der Aufnahmeoptionen-Ansicht.
+*/
 class ConfigureMaskDetectionTableViewController: UITableViewController {
 
     private var choosenIndexPath = 0
+    // Intervallauswahl
     private var possibleInterval: [String] {
         var stringArray = [String]()
         for index in 1...12 {
@@ -11,26 +15,33 @@ class ConfigureMaskDetectionTableViewController: UITableViewController {
         return stringArray
     }
     
+    // Auswahl der Intervall-Kategorie
     private let possibleUnit = ["Sekunden", "Minuten"]
     
+    // Bestimmung des Namen der Aufnahme (Beispielsweise Aufnahmeort)
     @IBOutlet weak var recordNameTxtField: UITextField! {
         didSet {
             recordNameTxtField.delegate = self
         }
     }
     
+    // Intervall und Invervall-Kategorie Label
     @IBOutlet weak var intervalLbl: UILabel!
     @IBOutlet weak var unitLbl: UILabel!
+    
+    // Kamera Button
     @IBOutlet weak var cameraBtn: UIBarButtonItem! {
         didSet {
             cameraBtn.isEnabled = false
         }
     }
     
+    // Done / Cancle Button
     @IBAction func cancelActionBtn(_ sender: UIBarButtonItem) {
         presentingViewController?.dismiss(animated: true)
     }
     
+    // Annimation beim herunterziehen der Ansicht
     @IBAction func goBack(segue: UIStoryboardSegue) {
         if let mvcUnwoundFrom = segue.source as? ChooseItemTableViewController {
             if choosenIndexPath == 1 {
@@ -43,20 +54,24 @@ class ConfigureMaskDetectionTableViewController: UITableViewController {
         }
     }
     
+    // Lädt den Inhalt nachdem der View geladen wird
     override func viewDidLoad() {
         super.viewDidLoad()
         setupToHideKeyboardOnTapOnView()
     }
     
+    // Funktion triggert das Berühren des Name of Record Input Feldes
     override func touchesBegan(_ touches: Set<UITouch>, with event: UIEvent?) {
         self.recordNameTxtField.endEditing(true)
     }
     
+    // Animation und Auswahl eines Menue-Objektes
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         choosenIndexPath = indexPath.row
     }
     
+    // Speicherung der Menue-Auswahl/Eingabe
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if let destination = segue.destination as? ChooseItemTableViewController {
@@ -82,7 +97,7 @@ class ConfigureMaskDetectionTableViewController: UITableViewController {
             }
         }
     }
-    
+    // Funktion lädt die Inhalte in die App und versteckt das keyboard
     func setupToHideKeyboardOnTapOnView() {
         let tap: UITapGestureRecognizer = UITapGestureRecognizer(
             target: self,
@@ -91,6 +106,7 @@ class ConfigureMaskDetectionTableViewController: UITableViewController {
         view.addGestureRecognizer(tap)
     }
     
+    // Funktion versteckt das keyboard
     @objc func dismissKeyboard() {
         self.cameraBtn.isEnabled = !recordNameTxtField.text!.isEmpty && !intervalLbl.text!.isEmpty && !unitLbl.text!.isEmpty
         view.endEditing(true)
