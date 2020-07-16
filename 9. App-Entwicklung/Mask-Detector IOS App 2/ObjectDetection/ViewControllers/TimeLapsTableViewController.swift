@@ -3,14 +3,16 @@ import UIKit
    Beinhaltet die Logic der Time-Laps-Ansicht.
 */
 class TimeLapsTableViewController: UITableViewController {
-
+    // ReportButton wird nur dann aktiviert, wenn Time-Laps Aufnahmen vorhanden sind
     private var loadedMaskImages = [MaskImage]() {
         didSet {
             dailyReportsBtn.isEnabled = loadedMaskImages.count > 0
         }
     }
+    // Gruppierung der Aufnahme-Sessions nach Datum
     private var groupedImagesByDay = [Date: [MaskImage]]()
     private var groupedImagesByDayUnmodified = [Date: [MaskImage]]()
+    // Sortierung der Aufnahme-Sessions nach Datum
     private var sortedKeys = [Date]()
     private var sortedValuesForKey = [MaskImage]()
     
@@ -20,8 +22,13 @@ class TimeLapsTableViewController: UITableViewController {
         return myIndicator
     }()
     
+    // Deklaration des reportButtons
     @IBOutlet weak var dailyReportsBtn: UIBarButtonItem!
     
+    /**
+    Funktion wird aufgerufen sobald der View geladen wurde.
+    Lädt die Dtaen in den Table View
+    */
     override func viewDidLoad() {
         super.viewDidLoad()
         setupDataForTableView()
@@ -29,6 +36,10 @@ class TimeLapsTableViewController: UITableViewController {
        
     }
     
+    /**
+    add Observer, welcher kontrolliert ob eine neue Aufnahme-Sessions dazugekommen ist beziehungsweise gelöscht wurde.
+    Falss ja, wird der Table View erneut mit den aktuellen Daten gefüllt.
+     */
     private func addObserver() {
         NotificationCenter.default.addObserver(
             forName: .PhotoWasAddedToDisk,
@@ -49,6 +60,9 @@ class TimeLapsTableViewController: UITableViewController {
         })
     }
     
+    /**
+        Funktion  fügt alle Aufnahme-Sessions. der Tabelle hinzu
+     */
     private func setupDataForTableView() {
         loadedMaskImages = getMaskImageFromDisk()
         groupedImagesByDay = groupedMaskImagesByDay(loadedMaskImages)
@@ -62,6 +76,9 @@ class TimeLapsTableViewController: UITableViewController {
         }
     }
     
+    /**
+       Funktion zum Löschen von Aufnahme-Sessions. Dies wird durch einen Swipe nach rechts realisert.
+    */
     private func removeMaskImagesFromDisk(maskImages: [MaskImage]) {
         
         var fileNames = [String]()
@@ -85,6 +102,9 @@ class TimeLapsTableViewController: UITableViewController {
         }
     }
     
+    /**
+       Lädt die lokal abgelegten Aufnahme-Sessions
+    */
     private func getMaskImageFromDisk() -> [MaskImage] {
         var maskImages = [MaskImage]()
         let url = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
@@ -99,6 +119,9 @@ class TimeLapsTableViewController: UITableViewController {
         return maskImages
     }
     
+    /**
+            Die Funktion gruppiert die Images nach dem Datum und gibt diese in Form einer Liste zurück
+    */
     private func groupedMaskImagesByDay(_ maskImages: [MaskImage]) -> [Date: [MaskImage]] {
         let empty: [Date: [MaskImage]] = [:]
         return maskImages.reduce(into: empty) { acc, cur in
@@ -112,12 +135,18 @@ class TimeLapsTableViewController: UITableViewController {
     }
 
     // MARK: - Table view data source
-
+    
+    /**
+       Gibt die Anzahl an Aufnahme-Session der ausgewählten Sektion zurück
+    */
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
         return groupedImagesByDay.keys.count
     }
-
+    
+    /**
+           Gibt die Anzahl an Aufnahme-Session zurück
+    */
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         let day = sortedKeys[section]
@@ -129,6 +158,9 @@ class TimeLapsTableViewController: UITableViewController {
         return true
     }
     
+    /**
+       Erstellt den Nachfrage-Alert bei der Löschung einer Aufnahme-Session
+    */
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     // first Action
         let eraseAction = UIContextualAction(style: .normal, title:  "", handler: { (ac:UIContextualAction, view:UIView, success:@escaping (Bool) -> Void) in
@@ -175,7 +207,10 @@ class TimeLapsTableViewController: UITableViewController {
         config.performsFirstActionWithFullSwipe = true
         return config
     }
-
+    
+    /**
+        Erstellt den Header der Tages-Sektion
+    */
     override func tableView(_ tableView: UITableView, titleForHeaderInSection section: Int) -> String? {
         let date = sortedKeys[section]
         let format = "dd.MM.yyyy"
@@ -184,6 +219,9 @@ class TimeLapsTableViewController: UITableViewController {
         return stringDay + " " + stringDate
     }
     
+    /**
+        Erstellt den View der einzelnen Aufnahme-Session
+    */
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "dateCell", for: indexPath)
         let date = sortedKeys[indexPath.section]
@@ -194,6 +232,9 @@ class TimeLapsTableViewController: UITableViewController {
         return cell
     }
     
+    /**
+        Realisiert die Selektierung und deselktierung einer einzelnen Aufnahme-Session (grauer Hintergrund bei Selektierung)
+    */
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
     }

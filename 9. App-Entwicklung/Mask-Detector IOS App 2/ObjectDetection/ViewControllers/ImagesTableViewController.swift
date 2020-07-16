@@ -3,13 +3,15 @@ import UIKit
 extension Notification.Name {
     static let PhotoWasRemovedFromDisk = Notification.Name("PhotoWasRemovedFromDisk")
 }
-
+/**
+   Beinhaltet die Logic der Aufnahmen-Ansicht.
+*/
 class ImagesTableViewController: UITableViewController {
-
+    // Deklarierung des reuseIdentifier
     private let reuseIdentifier = "imageTableViewCell"
-    
+    // Die hinterlegten Image-Dateien
     var maskImages = [MaskImage]()
-    
+    // Bestimmung des Aufnahme-Names sobad die View geladen wurde
     override func viewDidLoad() {
         super.viewDidLoad()
         self.title = "Aufnahmen " + (maskImages.first?.location ?? "")
@@ -21,18 +23,21 @@ class ImagesTableViewController: UITableViewController {
         // #warning Incomplete implementation, return the number of sections
         return 1
     }
-
+    
+    // Gibt die Anzahl an Bildern in der Aufnahme-Session zurück
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
         return maskImages.count
     }
     
+    // Handelt die Selektierung bzw Deselktierung von Images (grauer Hintergrund bei Selektierung)
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
-        
-        
     }
-
+    
+    /**
+       Sobald auf eine BildKachel geklickt wurde, öffnet sich der Big-Image-View des Bildes
+    */
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         
         if segue.identifier == "showBigImageSegue" {
@@ -54,6 +59,9 @@ class ImagesTableViewController: UITableViewController {
            return true
     }
     
+    /**
+        Erstellt den Nachfrage-Alert bei der Löschung eines Bildes
+    */
     override func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
     // first Action
         let eraseAction = UIContextualAction(style: .normal, title:  "", handler: { (ac:UIContextualAction, view:UIView, success:@escaping (Bool) -> Void) in
@@ -90,6 +98,7 @@ class ImagesTableViewController: UITableViewController {
         return config
     }
     
+    // Funktion löscht das aus der Liste entfernte Image dauerhaft
     private func removeMaskImagesFromDisk(at indexPath: IndexPath) {
         var fileName = maskImages[indexPath.row].date?.getTimeAndDateFormatted(dateFormat: "dd.MM.yyyy_HH:mm:ss") ?? ""
         fileName += ".json"
@@ -109,6 +118,9 @@ class ImagesTableViewController: UITableViewController {
         }
     }
     
+    /**
+           Erstellt den View des einzelnen Bildes
+    */
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
         
@@ -139,6 +151,9 @@ class ImagesTableViewController: UITableViewController {
         return cell
     }
     
+    /**
+        Erstellt einen Auschschnitt des Bildes für die Kachenansicht
+    */
     func cropImageToSquare(image: UIImage) -> UIImage? {
         let screenWidth = view.bounds.width
         let screenHeight = view.bounds.height
@@ -157,7 +172,4 @@ class ImagesTableViewController: UITableViewController {
     func addLabelBoxesToImageView() {
         
     }
-
-
-    
 }
