@@ -2,7 +2,7 @@
 <Workspace
    version = "1.0">
    <FileRef
-      location = "group:ObjectDetection.xcodeproj">
+      location = "group:/Users/swift/Desktop/HTW/WissensManagement/2.semester/Abgabe/GitAbgabe/Hausarbeit_Wissensmanagement_Deep_Learning/9. App-Entwicklung/Mask-Detector IOS App 2/Mask-Finder.xcodeproj">
    </FileRef>
    <FileRef
       location = "group:Pods/Pods.xcodeproj">
