@@ -13,6 +13,8 @@
 // limitations under the License.
 
 import UIKit
+import FirebaseStorage
+import FirebaseFirestore
 
 extension Notification.Name {
     static let PhotoWasAddedToDisk = Notification.Name("PhotoWasAddedToDisk")
@@ -178,7 +180,7 @@ extension ViewController: InferenceViewControllerDelegate {
 
 // MARK: CameraFeedManagerDelegate Methods
 extension ViewController: CameraFeedManagerDelegate {
-
+    
     //Aufnahme des Photos
     func tookPhoto(from data: Data) {
         
@@ -198,6 +200,21 @@ extension ViewController: CameraFeedManagerDelegate {
         
         // Das Image wird aus dem Data Object erstellt
         var image = UIImage(data: data)
+        
+        
+        guard let uploadData = image!.jpegData(compressionQuality: 1.0) else {
+            print("asdasfaf")
+            return }
+        let imageName =  String(Date().timeIntervalSince1970).replacingOccurrences(of: ".", with: "") + ".jpg"
+        let imageReference = Storage.storage().reference().child("original")
+            .child(imageName)
+        imageReference.putData(uploadData, metadata:nil) { (metadata, err) in
+            if let err = err {
+                print("error while put Data1" + err.localizedDescription)
+                return
+            }
+        }
+
         let widthInPixels = image!.size.width * image!.scale
         let heightInPixels = image!.size.height * image!.scale
         
@@ -223,11 +240,20 @@ extension ViewController: CameraFeedManagerDelegate {
    
         // - das neue Image wird wieder in ein Data Object umgewandelt zur Speicherung
         let data = image!.jpegData(compressionQuality: 1)
-            
+        
+        let imageReference2 = Storage.storage().reference().child("annotated")
+            .child(imageName)
+        imageReference2.putData(data!, metadata:nil) { (metadata, err) in
+            if let err = err {
+                print("error while put Data1" + err.localizedDescription)
+                return
+            }
+        }
         maskImage = MaskImage(imageData: data!, name: name, date: Date(), infos: maskImageInfoArray)
-
+        
     }
     
+ 
     /**
      In jedes Bild werden die erkannten Kategorien mit einem Rahmen eingezeichnet und benannt.
     */
@@ -275,7 +301,6 @@ extension ViewController: CameraFeedManagerDelegate {
          Das Image wird als Json Datei gesichert.
     */
     private func save() {
-        
         if let stringDate = self.maskImage?.date?.getTimeAndDateFormatted(dateFormat: "dd.MM.yyyy_HH:mm:ss") {
             if let json = self.maskImage?.json {
                 if let url = try? FileManager.default.url(for: .documentDirectory,

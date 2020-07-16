@@ -9,5 +9,8 @@ target 'ObjectDetection' do
   pod 'TensorFlowLiteSwift'
   pod 'Charts'
   pod 'SRCountdownTimer', :git => 'https://github.com/maikdrop/SRCountdownTimer.git'
-
+  pod 'Firebase/Analytics'
+  pod 'Firebase/Database'
+  pod 'Firebase/Storage'
+  pod 'Firebase/Firestore'
 end

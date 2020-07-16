@@ -2,7 +2,7 @@
  MIT License
 
  Copyright (c) 2017 Ruslan Serebriakov <rsrbk1@gmail.com>
- 
+
  Permission is hereby granted, free of charge, to any person obtaining a copy
  of this software and associated documentation files (the "Software"), to deal
  in the Software without restriction, including without limitation the rights
@@ -58,6 +58,7 @@ public class SRCountdownTimer: UIView {
     private lazy var counterLabel: UILabel = {
         let label = UILabel()
         self.addSubview(label)
+
         label.textAlignment = .center
         label.frame = self.bounds
         if let font = self.labelFont {
@@ -105,6 +106,7 @@ public class SRCountdownTimer: UIView {
 
     override public func draw(_ rect: CGRect) {
         super.draw(rect)
+
         let context = UIGraphicsGetCurrentContext()
         let radius = (rect.width - lineWidth) / 2
         
