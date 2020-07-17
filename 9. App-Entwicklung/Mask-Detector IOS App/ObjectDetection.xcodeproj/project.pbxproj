@@ -529,7 +529,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tensorflowTest.ObjectDetection;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ObjectDetection;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
@@ -558,7 +558,7 @@
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.tensorflowTest.ObjectDetection;
-				PRODUCT_NAME = "$(TARGET_NAME)";
+				PRODUCT_NAME = ObjectDetection;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_OBJC_BRIDGING_HEADER = "";
 				SWIFT_VERSION = 5.0;
