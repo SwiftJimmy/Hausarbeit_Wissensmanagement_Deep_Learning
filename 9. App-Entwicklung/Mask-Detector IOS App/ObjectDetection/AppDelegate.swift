@@ -55,7 +55,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
            print(error.localizedDescription)
          } else {
            print("download success")
-           print(url?.absoluteString)
          }
        }
   }

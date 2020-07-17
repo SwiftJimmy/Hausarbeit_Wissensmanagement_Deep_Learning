@@ -1,6 +1,8 @@
 
 import Foundation
-
+/**
+   Die Klasse/struct repräsentiert ein Image-Objekt
+*/
 struct MaskImage: Codable, Hashable {
     
     var imageData: Data?

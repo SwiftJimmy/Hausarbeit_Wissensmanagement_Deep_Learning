@@ -506,6 +506,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Y8C-Wy-76t" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <navigationItem title="Aufnahmen" largeTitleDisplayMode="always" id="WLk-YJ-0zV"/>
             </objects>
             <point key="canvasLocation" x="2601" y="143"/>
         </scene>
