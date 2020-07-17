@@ -89,21 +89,23 @@ class ModelDataHandler: NSObject {
     let modelFilename = modelFileInfo.name
 
     // Construct the path to the model file.
+    /**
     guard let modelPath = Bundle.main.path(
       forResource: modelFilename,
       ofType: modelFileInfo.extension
     ) else {
       print("Failed to load the model file with name: \(modelFilename).")
       return nil
-    }
-
+    }*/
+    let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    let localURL = documentsURL.appendingPathComponent("detect.tflite")
     // Specify the options for the `Interpreter`.
     self.threadCount = threadCount
     var options = Interpreter.Options()
     options.threadCount = threadCount
     do {
       // Create the `Interpreter`.
-      interpreter = try Interpreter(modelPath: modelPath, options: options)
+        interpreter = try Interpreter(modelPath: localURL.path, options: options)
       // Allocate memory for the model's input `Tensor`s.
       try interpreter.allocateTensors()
     } catch let error {
@@ -241,12 +243,16 @@ class ModelDataHandler: NSObject {
   private func loadLabels(fileInfo: FileInfo) {
     let filename = fileInfo.name
     let fileExtension = fileInfo.extension
+    /**
     guard let fileURL = Bundle.main.url(forResource: filename, withExtension: fileExtension) else {
       fatalError("Labels file not found in bundle. Please add a labels file with name " +
                    "\(filename).\(fileExtension) and try again.")
-    }
+    }*/
+    let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+    let localURL = documentsURL.appendingPathComponent("labelmap.txt")
+    
     do {
-      let contents = try String(contentsOf: fileURL, encoding: .utf8)
+        let contents = try String(contentsOf: localURL, encoding: .utf8)
       labels = contents.components(separatedBy: .newlines)
     } catch {
       fatalError("Labels file named \(filename).\(fileExtension) cannot be read. Please add a " +

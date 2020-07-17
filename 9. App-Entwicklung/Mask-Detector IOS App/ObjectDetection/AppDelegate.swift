@@ -14,6 +14,7 @@
 
 import UIKit
 import Firebase
+import FirebaseFirestore
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -23,7 +24,62 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     _ application: UIApplication,
     didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]? = nil
   ) -> Bool {
+    
     FirebaseApp.configure()
+    // Load Model
+    copyFileToDocumentsFolder(nameForFile: "detect", extForFile: "tflite")
+    copyFileToDocumentsFolder(nameForFile: "labelmap", extForFile: "txt")
+    if Reachability.isConnectedToNetwork(){
+        downloadDataFromFirebaseToDocuments(FirebaseFilePath: "model/detect.tflite", fileName: "detect.tflite")
+        downloadDataFromFirebaseToDocuments(FirebaseFilePath: "model/labelmap.txt", fileName: "labelmap.txt")
+    }
     return true
   }
+    
+   
+    func downloadDataFromFirebaseToDocuments(FirebaseFilePath: String, fileName: String){
+       
+    
+       let pathReference = Storage.storage().reference(withPath: FirebaseFilePath)
+       // Create a reference to the file you want to download
+       let islandRef = pathReference
+       
+        // Create local filesystem URL
+       let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first!
+       let localURL = documentsURL.appendingPathComponent(fileName)
+
+       // Download to the local filesystem
+       let downloadTask = islandRef.write(toFile: localURL) { url, error in
+         if let error = error {
+           print("Someting went wrong")
+           print(error.localizedDescription)
+         } else {
+           print("download success")
+           print(url?.absoluteString)
+         }
+       }
+  }
+    
+    func copyFileToDocumentsFolder(nameForFile: String, extForFile: String) {
+
+        let documentsURL = FileManager.default.urls(for: .documentDirectory, in: .userDomainMask).first
+        let destURL = documentsURL!.appendingPathComponent(nameForFile).appendingPathExtension(extForFile)
+        guard let sourceURL = Bundle.main.url(forResource: nameForFile, withExtension: extForFile)
+            else {
+                print("Source File not found.")
+                return
+        }
+        let fileManager = FileManager.default
+        if fileManager.fileExists(atPath: destURL.path) == false {
+            do {
+                try fileManager.copyItem(at: sourceURL, to: destURL)
+                } catch {
+                   print(error)
+                   print("Unable to copy file")
+                }
+        }
+           
+    }
+    
+ 
 }
