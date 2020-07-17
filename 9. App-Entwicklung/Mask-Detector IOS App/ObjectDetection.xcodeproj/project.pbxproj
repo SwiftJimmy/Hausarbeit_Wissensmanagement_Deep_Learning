@@ -17,6 +17,7 @@
 		29FE8A5924A6310800827606 /* ImagesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FE8A5824A6310800827606 /* ImagesTableViewController.swift */; };
 		29FE8A5F24A63DF700827606 /* BigImageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 29FE8A5E24A63DF700827606 /* BigImageViewController.swift */; };
 		4319942024C0E576006886C7 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4319941F24C0E576006886C7 /* GoogleService-Info.plist */; };
+		4319942224C18CCC006886C7 /* Reachability.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4319942124C18CCC006886C7 /* Reachability.swift */; };
 		AA055D8921622F3E00B25948 /* labelmap.txt in Resources */ = {isa = PBXBuildFile; fileRef = AA055D8821622F3E00B25948 /* labelmap.txt */; };
 		AA119EA2217F337300DE46CF /* ModelDataHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA119EA1217F337300DE46CF /* ModelDataHandler.swift */; };
 		AA16E59B21807BAC00D9E153 /* InfoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA16E59921807A7000D9E153 /* InfoCell.swift */; };
@@ -47,6 +48,7 @@
 		29FE8A5824A6310800827606 /* ImagesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesTableViewController.swift; sourceTree = "<group>"; };
 		29FE8A5E24A63DF700827606 /* BigImageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BigImageViewController.swift; sourceTree = "<group>"; };
 		4319941F24C0E576006886C7 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		4319942124C18CCC006886C7 /* Reachability.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Reachability.swift; sourceTree = "<group>"; };
 		88E1A23811280B863E5E506A /* Pods_ObjectDetection.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_ObjectDetection.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		989AC282AB76829BBB1F2F9A /* Pods-ObjectDetection.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-ObjectDetection.debug.xcconfig"; path = "Target Support Files/Pods-ObjectDetection/Pods-ObjectDetection.debug.xcconfig"; sourceTree = "<group>"; };
 		AA055D8821622F3E00B25948 /* labelmap.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = labelmap.txt; sourceTree = "<group>"; };
@@ -97,6 +99,7 @@
 				AAB1116B21511218008C215D /* detect.tflite */,
 				AA055D8821622F3E00B25948 /* labelmap.txt */,
 				29FE8A4E24A4F3E800827606 /* MaskImage.swift */,
+				4319942124C18CCC006886C7 /* Reachability.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -358,6 +361,7 @@
 				29FE8A5324A53CA000827606 /* Utilities.swift in Sources */,
 				291944AB24A6652600421661 /* ReportsViewController.swift in Sources */,
 				AAEF3D8D21A2BE2B0073AE1C /* UIColorExtension.swift in Sources */,
+				4319942224C18CCC006886C7 /* Reachability.swift in Sources */,
 				AA9AC59F212D39FC000B4E9D /* AppDelegate.swift in Sources */,
 				AA9AC5D7212D43E0000B4E9D /* PreviewView.swift in Sources */,
 				AA16E59B21807BAC00D9E153 /* InfoCell.swift in Sources */,
