@@ -228,7 +228,7 @@ class TimeLapsTableViewController: UITableViewController {
         let maskImages = groupedImagesByDay[date]
         let time = maskImages![indexPath.row].date!.getTimeAndDateFormatted(dateFormat: "HH:mm:ss")
         cell.textLabel!.text = "Ort: " + maskImages![indexPath.row].location
-        cell.detailTextLabel!.text = "Startzeit: " + time
+        cell.detailTextLabel!.text = "Letzte Aufnahme: " + time
         return cell
     }
     

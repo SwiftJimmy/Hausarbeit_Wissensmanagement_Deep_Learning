@@ -14,7 +14,7 @@ class ImagesTableViewController: UITableViewController {
     // Bestimmung des Aufnahme-Names sobad die View geladen wurde
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.title = "Aufnahmen " + (maskImages.first?.location ?? "")
+        self.title = (maskImages.first?.location ?? "")
     }
 
     // MARK: - Table view data source
