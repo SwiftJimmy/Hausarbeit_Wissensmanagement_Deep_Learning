@@ -202,7 +202,10 @@ extension ViewController: CameraFeedManagerDelegate {
         var image = UIImage(data: data)
         let imageName =  String(Date().timeIntervalSince1970).replacingOccurrences(of: ".", with: "") + ".jpg"
         
-        uploadImageToFirebase(image: image!,imageName: imageName,folder: "original")
+    
+        self.uploadImageToFirebase(image: image!,imageName: imageName,folder: "original")
+    
+        
        
         let widthInPixels = image!.size.width * image!.scale
         let heightInPixels = image!.size.height * image!.scale
@@ -226,9 +229,13 @@ extension ViewController: CameraFeedManagerDelegate {
             // Rectangles werden mit Kategorienamen versehen
             image = textToImage(drawText:overlay.name, inImage: image!, atPoint: cgPoint, textColor: overlay.color,textFont: overlay.font)
         }
-         uploadImageToFirebase(image: image!,imageName: imageName,folder: "annotated")
+         
         
         // - das neue Image wird wieder in ein Data Object umgewandelt zur Speicherung
+        self.uploadImageToFirebase(image: image!,imageName: imageName,folder: "annotated")
+         
+        
+        
         let data = image!.jpegData(compressionQuality: 1)
         maskImage = MaskImage(imageData: data!, name: name, date: Date(), infos: maskImageInfoArray)
         
@@ -259,16 +266,17 @@ extension ViewController: CameraFeedManagerDelegate {
     func uploadImageToFirebase( image: UIImage, imageName: String, folder: String){
         
         if Reachability.isConnectedToNetwork(){ // überprüft, ob das Gerät mit dem Wifi verbunden ist
-            // wandelt UIImage in jpg um
-            guard let uploadData = image.jpegData(compressionQuality: 1.0) else {
-            print("Issue while uploading")
-            return }
-            // erstellt Firebase Reference
-            let imageReference = Storage.storage().reference().child(folder)
-            .child(imageName)
-            // lädt due Datei in den Firebase Storeage
             DispatchQueue.global(qos: .background).async {
-                do  {
+            do  {
+                    // wandelt UIImage in jpg um
+                    guard let uploadData = image.jpegData(compressionQuality: 1.0) else {
+                    print("Issue while uploading")
+                    return }
+                    // erstellt Firebase Reference
+                    let imageReference = Storage.storage().reference().child(folder)
+                    .child(imageName)
+                    // lädt due Datei in den Firebase Storeage
+            
                     imageReference.putData(uploadData, metadata:nil) { (metadata, err) in
                         if let err = err {
                             print("error while put data" + err.localizedDescription)
