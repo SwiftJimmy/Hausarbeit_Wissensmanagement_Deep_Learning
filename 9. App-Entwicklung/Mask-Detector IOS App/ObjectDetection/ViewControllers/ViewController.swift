@@ -214,8 +214,8 @@ extension ViewController: CameraFeedManagerDelegate {
             let width = overlay.borderRect.size.width
             let height = overlay.borderRect.size.height
             // Umskallierung der Rahemn der vorab erkannten Kategorien
-            let newx = (x/400)*widthInPixels
-            let newy = (y/600)*heightInPixels
+            let newx = (x/380)*widthInPixels
+            let newy = (y/650)*heightInPixels
             let newwidth = (width/300)*widthInPixels
             let newheight = (height/700)*heightInPixels
             // Das zu zeichnende Ractangle wird erstellt
