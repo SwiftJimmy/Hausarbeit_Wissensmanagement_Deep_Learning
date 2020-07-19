@@ -84,9 +84,8 @@ class ModelDataHandler: NSObject {
   // MARK: - Initialization
 
   /// A failable initializer for `ModelDataHandler`. A new instance is created if the model and
-  /// labels files are successfully loaded from the app's main bundle. Default `threadCount` is 1.
-  init?(modelFileInfo: FileInfo, labelsFileInfo: FileInfo, threadCount: Int = 1) {
-    let modelFilename = modelFileInfo.name
+  /// labels files are successfully loaded from the app's main bundle. Default `threadCount` is 2.
+  init?(modelFileInfo: FileInfo, labelsFileInfo: FileInfo, threadCount: Int = 2) {
 
     // Construct the path to the model file.
     /**
@@ -119,6 +118,9 @@ class ModelDataHandler: NSObject {
     loadLabels(fileInfo: labelsFileInfo)
   }
 
+    
+   
+    
   /// This class handles all data preprocessing and makes calls to run inference on a given frame
   /// through the `Interpeter`. It then formats the inferences obtained and returns the top N
   /// results for a successful inference.

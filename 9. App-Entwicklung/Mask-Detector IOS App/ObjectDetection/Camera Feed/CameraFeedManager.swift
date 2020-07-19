@@ -350,7 +350,6 @@ extension CameraFeedManager: AVCaptureVideoDataOutputSampleBufferDelegate {
     guard let imagePixelBuffer = pixelBuffer else {
       return
     }
-
     // Delegates the pixel buffer to the ViewController.
     delegate?.didOutput(pixelBuffer: imagePixelBuffer)
   }

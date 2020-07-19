@@ -13,6 +13,7 @@
 // limitations under the License.
 
 import UIKit
+import TensorFlowLite
 import FirebaseStorage
 import FirebaseFirestore
 
@@ -44,6 +45,7 @@ class ViewController: UIViewController {
     }
     private weak var timer: Timer?
     private var objectOverlays = [ObjectOverlay]()
+    private var resultArray = [Inference]()
     private var maskImage: MaskImage? {
         didSet {
              save()
@@ -201,34 +203,21 @@ extension ViewController: CameraFeedManagerDelegate {
         // Das Image wird aus dem Data Object erstellt
         var image = UIImage(data: data)
         let imageName =  String(Date().timeIntervalSince1970).replacingOccurrences(of: ".", with: "") + ".jpg"
-        
-    
+  
         self.uploadImageToFirebase(image: image!,imageName: imageName,folder: "original")
     
-        
-       
-        let widthInPixels = image!.size.width * image!.scale
-        let heightInPixels = image!.size.height * image!.scale
-        
-        // Jede erkannte Kategorie wird in das Image mit Rahmen eingezeichnet
-        objectOverlays.forEach { (overlay) in
-            let x = overlay.borderRect.minX
-            let y = overlay.borderRect.minY
-            let width = overlay.borderRect.size.width
-            let height = overlay.borderRect.size.height
-            // Umskallierung der Rahemn der vorab erkannten Kategorien
-            let newx = (x/380)*widthInPixels
-            let newy = (y/650)*heightInPixels
-            let newwidth = (width/300)*widthInPixels
-            let newheight = (height/700)*heightInPixels
-            // Das zu zeichnende Ractangle wird erstellt
-            let cgRect = CGRect(x: newx, y: newy, width: newwidth, height: newheight)
-            let cgPoint = CGPoint(x: newx, y: newy-60)
+        /**
+                    Draw Rectangle over each object
+         */
+        resultArray.forEach { (overlay) in
+            let cgRect = overlay.rect
+            let cgPoint = CGPoint(x: cgRect.minX, y:cgRect.minY - 30 )
             // Rectangle wird eingezeichnet
-            image = drawRectangleOnImage(image: image!, withFrame: cgRect,rectColor: overlay.color)
+            image = drawRectangleOnImage(image: image!, withFrame: cgRect,rectColor: overlay.displayColor)
             // Rectangles werden mit Kategorienamen versehen
-            image = textToImage(drawText:overlay.name, inImage: image!, atPoint: cgPoint, textColor: overlay.color,textFont: overlay.font)
+            image = textToImage(drawText:overlay.className, inImage: image!, atPoint: cgPoint, textColor: overlay.displayColor,textFont: UIFont(name: "Times New Roman", size: 30.0)!)
         }
+        
          
         
         // - das neue Image wird wieder in ein Data Object umgewandelt zur Speicherung
@@ -240,8 +229,7 @@ extension ViewController: CameraFeedManagerDelegate {
         maskImage = MaskImage(imageData: data!, name: name, date: Date(), infos: maskImageInfoArray)
         
     }
-    
- 
+     
     /**
      In jedes Bild werden die erkannten Kategorien mit einem Rahmen eingezeichnet und benannt.
     */
@@ -300,8 +288,6 @@ extension ViewController: CameraFeedManagerDelegate {
     */
     func textToImage(drawText text: String, inImage image: UIImage, atPoint point: CGPoint,textColor: UIColor, textFont: UIFont ) -> UIImage {
         
-        let textFont = UIFont(name: "Helvetica Bold", size:textFont.pointSize * 2)!
-
         let scale = UIScreen.main.scale
         UIGraphicsBeginImageContextWithOptions(image.size, false, scale)
 
@@ -421,7 +407,8 @@ extension ViewController: CameraFeedManagerDelegate {
 
     previousInferenceTimeMs = currentTimeMs
     result = self.modelDataHandler?.runModel(onFrame: pixelBuffer)
-
+    resultArray.removeAll()
+    resultArray = result!.inferences
     guard let displayResult = result else {
       return
     }

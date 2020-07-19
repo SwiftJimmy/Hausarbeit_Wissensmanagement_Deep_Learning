@@ -26,9 +26,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   ) -> Bool {
     
     FirebaseApp.configure()
-    // Load Model
+    // Copy model 
     copyFileToDocumentsFolder(nameForFile: "detect", extForFile: "tflite")
     copyFileToDocumentsFolder(nameForFile: "labelmap", extForFile: "txt")
+    // Load Model if Wifi Connection is available
     if Reachability.isConnectedToNetwork(){
         downloadDataFromFirebaseToDocuments(FirebaseFilePath: "model/detect.tflite", fileName: "detect.tflite")
         downloadDataFromFirebaseToDocuments(FirebaseFilePath: "model/labelmap.txt", fileName: "labelmap.txt")
