@@ -1,1 +1,0 @@
-# Hausarbeit_Wissensmanagement_Deep_Learning
