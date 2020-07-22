@@ -7,9 +7,9 @@ import math
 import os
 
 labels = ['with_mask', 'without_mask','mask_worn_incorrect']
-modelPath = "Path/to/Model"
-inputDir = r'Path/toImageFolder'
-outputDir = r'Path/to/OutputFolder'
+modelPath = "modelFile"
+inputDir = r'Path/to/input/dir'
+outputDir = r'Path/to/output/dir'
 
 def resizeShapeX(shape):
     return (shape/300)*Image.open(imagepath).size[0]
@@ -24,17 +24,17 @@ def printBoxIntoImage(index):
     labelName = int(detection_classes[0][index])
     img1 = ImageDraw.Draw(imgOriginal)  
 
-
-    font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 30)
-    
-    img1.text((resizeShapeX(width*detection_boxes[0][index][1]),resizeShapeY(height*detection_boxes[0][index][0]) - 30), labels[labelName], font=font)
     
     if labels[labelName] == "with_mask":
-         img1.rectangle(shape, outline ="green",width=3) 
+         color = "green"
     elif labels[labelName] == "without_mask":
-        img1.rectangle(shape, outline ="red",width=3) 
-    else:
-        img1.rectangle(shape, outline ="orange",width=3) 
+         color = "red"
+    else: 
+         color = "orange"
+        
+    img1.rectangle(shape, outline =color,width=3)
+    font = ImageFont.truetype("/System/Library/Fonts/Supplemental/Arial.ttf", 20 )
+    img1.text((resizeShapeX(width*detection_boxes[0][index][1]),resizeShapeY(height*detection_boxes[0][index][2]) ), labels[labelName], font=font,fill=color)
     
    
 
@@ -79,11 +79,9 @@ for filename in os.listdir(inputDir):
     detection_scores = interpreter.get_tensor(output_details[2]['index'])
     num_boxes = interpreter.get_tensor(output_details[3]['index'])
 
-
-
-
     for i,value in enumerate(detection_scores[0]):
-        if value >= 0.7:        
+        if value >= 0.7:    
+            
             printBoxIntoImage(i)
     tuplevalue = tuple(int(ti/2) for ti in Image.open(imagepath).size)
     img2 = img.resize(tuplevalue)
