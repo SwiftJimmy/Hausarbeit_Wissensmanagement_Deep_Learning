@@ -7,9 +7,9 @@ import math
 import os
 
 labels = ['with_mask', 'without_mask','mask_worn_incorrect']
-modelPath = "modelFile"
-inputDir = r'Path/to/input/dir'
-outputDir = r'Path/to/output/dir'
+modelPath = "fullintegermodel.tflite"
+inputDir = r'/path/to/input/dir'
+outputDir = r'/path/to/output/dir'
 
 def resizeShapeX(shape):
     return (shape/300)*Image.open(imagepath).size[0]
