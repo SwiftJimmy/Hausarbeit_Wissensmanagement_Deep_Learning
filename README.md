@@ -1,4 +1,4 @@
-# Hausarbeit_Wissensmanagement_Deep_Learning
+# Mask-Detector Deep_Learning IOS App
 
 Die Ordnerstruktur in diesem Repository entspricht den Kapiteln der Dokumentation (Doku.pdf). 
 
