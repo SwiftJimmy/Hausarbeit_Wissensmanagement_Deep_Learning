@@ -1,4 +1,4 @@
-# Mask-Detector Deep_Learning IOS App
+# Mask-Detector Deep Learning IOS App
 
 Die Ordnerstruktur in diesem Repository entspricht den Kapiteln der Dokumentation (Doku.pdf). 
 
